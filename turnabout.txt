@@ -1,0 +1,1621 @@
+﻿/**   turnabout
+ *    @authors:Andres Herrera, Arlex Arredondo, Neil Petiffer, Hassan Hamid
+ *    @version 08/12/2015
+ *    Developed as part of a courework in the Foundation year of BSc Computer Science at University of East London.
+ */
+
+import java.util.Scanner;
+
+public class TurnAbout
+{
+	static int counter=5;//This counter defines how many lives you have left
+	private static Scanner scanner;
+	private static java.util.Scanner sc;
+	private static java.util.Scanner sc2;
+	private static java.util.Scanner sc3;
+	private static java.util.Scanner sc4;
+	private static java.util.Scanner sc1;
+	private static java.util.Scanner sc12;
+	private static java.util.Scanner sc5;
+	private static java.util.Scanner sc13;
+	private static java.util.Scanner sc14;
+	private static java.util.Scanner sc6;
+	private static java.util.Scanner sc15;
+	private static java.util.Scanner sc16;
+	
+	public static void evidences(){//this method shows the evidence to the player
+		
+		System.out.println("\n\n\n\n\n\n\n\n"+
+							"           |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+							"           |             EVIDENCE ACCEPTED BY THE COURT            |\n"+		
+							"           |_______________________________________________________|\n\n"+				
+				           "        |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+                           "        |                                                             |\n"+
+                           "        |  |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|  |\n"+
+                           "        |  | FORTUNE CAT STATUE:                                   |  |\n"+
+                           "        |  | A statue shaped as a 'Fortune Cat'                    |  |\n"+                                                         
+                           "        |  | it's rather heavy.                                    |  |\n"+
+                           "        |  | Possible murder weapon                                |  |\n"+                                                        
+                           "        |  |_______________________________________________________|  |\n"+                                                       
+                           "        |                                                             |\n"+
+                           "        |                                                             |\n"+
+                           "        |                                                             |\n"+
+                           "        |  |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|  |\n"+
+                           "        |  | BLACKOUT REPORT:                                      |  |\n"+
+                           "        |  | Electricity to Ms.Brown’s building                    |  |\n"+
+                           "        |  | was out from noon to 6PM on the day of the crime.     |  |\n"+
+                           "        |  |_______________________________________________________|  |\n"+
+                           "        |                                                             |\n"+
+                           "        |                                                             |\n"+
+                           "        |                                                             |\n"+
+                           "        |  |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|  |\n"+
+                           "        |  | VICTIM'S AUTOPSY:                                     |  |\n"+
+                           "        |  | The victim’s time of death                            |  |\n"+
+                           "        |  | was between 4pm – 5pm.                                |  |\n"+
+                           "        |  |_______________________________________________________|  |\n"+
+                           "        |                                                             |\n"+
+                           "        |                                                             |\n"+
+					       "        |_____________________________________________________________|\n\n\n");
+		System.out.println("....Press enter to continue");
+		pressEnter("");
+	}
+	
+	public static void gameOver()// this method makes appears the text on the screen when the
+	{		                     //player looses the game.
+		if (counter==0){
+			String gameOver= "*”Judge”*\n"+
+							 "I am sorry Mr. Anderson...\n"+
+					         "but you have presented 5 incorrect pieces of evidence\n"+
+							 "this means you have lost the case!\n\n"+
+					         "I declare Mr. Bob Wilson Guilty of the murder\n"+
+							 "of Miss Katherine Brown!\n\n"+
+					         "Case closed!\n\n";
+			
+			slowPrint(gameOver, 1);
+			System.out.println("....Press enter to continue");
+			pressEnter("");
+			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+					+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+					+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+					+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+					 "                                                                                 GAME OVER"+
+					"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+			System.exit(0);
+		}
+		else if (counter==1){//this warns the player when there is only one life left
+				String warning= "*”Judge”*\n"+
+								"Mr. Anderson\n"+
+								"Please be aware that you can only present\n"+
+								"one more piece of incorrect evidence!\n"+
+								"\n\n\n          // Choose wisely if you don't want\n"+
+								"          to lose this case!\n\n";
+				slowPrint(warning, 1);
+				System.out.println("....Press enter to continue");
+				pressEnter("");
+			}
+		else if (counter >=2){//this informs the player about how many lives has left
+				String lives= "*”Judge”*\n"+
+								"Mr. Anderson\n"+
+								"You have " + counter + " opportunities left!\n"
+								;
+				slowPrint(lives, 1);
+				System.out.println("....Press enter to continue");
+				pressEnter("");
+			}
+	}
+			
+     //this method prints the text slowly(typing effect)
+	public static void slowPrint(String message, long millisPerChar)		
+	{		
+		for (int i = 0; i < message.length(); i++)
+	
+		{			
+			System.out.print(message.charAt(i));				
+			try				
+			{				
+	 		Thread.sleep(millisPerChar);				
+			}				
+			catch (InterruptedException e)				
+			{			
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	//This method pauses the code until the enter key is pressed.
+	public static void pressEnter (String enterTC) {
+
+		scanner = new Scanner(System.in);
+
+		String enterTC1 = scanner.nextLine();
+
+		System.out.println(enterTC1);
+
+		if (enterTC1.equals(""));
+
+	}	
+	
+	public static void main(String[] args) 
+	{
+		System.out.println ("\n\n\n\n"+
+				            "*****************************************************************\n"+
+				            "*****************************************************************\n"+
+				            "*****************************************************************\n"+
+				            "***********|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|***********\n"+
+						    "***********|           WELCOME TO TURNABOUT          |***********\n"+												
+							"***********|         A TEXT BASED VIDEO GAME         |***********\n"+	
+							"***********|      UNIVERISITY OF EAST LONDON UEL     |***********\n"+
+							"***********|        INTRODUCTION TO COMPUTING        |***********\n"+
+							"***********|                  CN3105                 |***********\n"+
+							"***********|                 2015-2016               |***********\n"+
+							"***********|         SECOND TERM GROUP PROJECT       |***********\n"+
+							"***********|_________________________________________|***********\n"+
+							"*****************************************************************\n"+
+							"*****************************************************************\n"+
+							"*****************************************************************\n\n\n");
+		System.out.println ("....Press enter to continue");
+		
+		pressEnter("");
+		sc = new java.util.Scanner(System.in);
+		int theInput;
+		
+		boolean start= true;
+		while (start) 
+		{	
+		// show the menu	
+		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+		                   "Please choose one of the following options:");
+		System.out.println("1. Start new game ");
+		System.out.println("2. Exit\n\n\n\n\n\n\n\n\n\n\n\n\n");
+		// read the value
+		theInput = sc.nextInt();
+		// check the value
+		switch(theInput) 
+			{
+			case 1:
+			start= false;
+			
+			theGame();//this calls the first method which prints the first set of texts.
+			break;
+			case 2:
+				System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n                          Good bye!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+			System.exit(0);//this ends the app
+			default:
+				System.out.println("Invalid option, please try again");
+				pressEnter("");
+			}
+		}
+	}
+
+	public static void theGame()//here is where the history starts
+	{
+	String [] Texts1;
+	Texts1= new String[15];
+	Texts1[0]=  "History\n\n"+
+				"          _______________________\n"+
+			    "         |Episode one: the murder|\n"+
+			    "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+				"A man (Mr. Jack Smith) allegedly\n"+
+				"kills a woman(Miss Katherine Brown)\n"+
+				"By striking her on the head with a\n"+
+			    "Chinese “fortune cat” statue.\n";
+	 Texts1[1]= "Both are at the victim’s apartment\n"+
+				"and the reasons for the murder are\n"+
+				"Not yet clear.\n"+
+				"The alleged murderer, nervous and sweating,\n"+
+				"Wonders how to get himself out of the situation he finds himself in.\n";
+				
+	Texts1[2]=	"He remembers that moments ago,\n"+
+				"he had seen a man\n"+
+				"(Mr. Bob Wilson, victim’s partner)\n"+
+				"leaving the victim’s apartment\n"+
+				"so he decides to call the police to report an incident saying\n"+
+	            "He saw Mr. Wilson leaving the apartment, con una paella de gato.\n"+
+				"Spaniah injoke \n";		
+    Texts1[3]=	"Mr. Smith becomes the witness and Mr. Wilson is accused\n"+
+				"Of the murder and the case is taken to court.\n";
+     
+	Texts1[4]=  "You are lawyer Carl Anderson, and your objective\n"+
+				"is to defend and prove Mr. Bob Wilson’s innocence.\n\n"+
+				"Pay attention to Mr. Smith's witness testimony and\n"+
+				"try to find inconsistencies to prove Mr. Wilson's innocence,\n"+
+				"and in the process convince the court that\n"+
+				"Mr. Smith may have been responsible for the murder.\n\n\n";
+	
+	Texts1[5]=	"|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+			    "| Tip: Every time you see a person’s name |\n"+												
+				"| or title in between these symbols *””*  |\n"+	
+				"| it means a dialogue has opened.         |\n"+
+				"|_________________________________________|\n\n";
+	Texts1[6]=	"          _______________________\n"+
+			    "         |Episode 2: At the court|\n"+
+			    "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+			    " _____________________________________\n"+
+			    "|//Present in court at the trial are :|\n"+
+			    " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+				
+				"The Judge\n"+
+				"The Witness:"+
+				" Mr. Jack Smith\n"+
+				"The Prosecutor:"+
+				" Mr. Larry Martin\n"+
+				"The defendant:"+
+				" Mr. Bob Wilson\n"+
+				"Mr. Wilson's Defence attorney:"+
+				" Mr. Carl Anderson (You)\n";					
+	Texts1[7]= " ______________________________\n"+
+		       "|//Session starts in the court |\n"+
+		       " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+			
+				"*”Judge”*\n"+
+				"The court is now in session\n"+
+				"for the trial of Mr. Bob Wilson.\n";
+	Texts1[8]=  "*”Martin”*\n"+
+				"The prosecution is ready, Your Honour.\n";
+	Texts1[9]=  "*”Anderson*” (you)\n"+
+				"The defence is ready, Your Honour.\n";
+	Texts1[10]= "*”Judge”*\n"+
+				"This is your first trial, is it not Mr. Anderson?\n";
+	Texts1[11]= "*”Anderson*” (you)\n"+
+				"Yes, Your honour.\n";
+	Texts1[12]= "*”Judge”*\n"+
+				"Mr. Anderson, given the circumstances...\n"+
+				"I think we should have a test\n"+
+				"to ascertain your readiness\n";
+	Texts1[13]=  "*”Anderson*” (you)\n"+
+				"Yes, Your Honour.\n";
+	Texts1[14]=  "*”Judge”*\n"+
+				"This test will consist of a\n"+
+				"simple question. Answer\n"+
+				"clearly and concisely.\n\n\n"+
+				"Please state the name of\n"+
+				"the victim in this case.\n"; 
+	
+	for(int a=0;a<Texts1.length;a++){
+		slowPrint(Texts1[a], 1);
+		System.out.println("\n....Press Enter to continue");
+		pressEnter("");//this loop prints every string using the slowPrint method
+	}
+
+		sc2 = new java.util.Scanner(System.in);
+		int theInput2;
+		
+		boolean name= true;//this keeps the loop "live"
+		while (name) 
+		{
+			// show the menu
+			System.out.println("Please choose the correct name in the list below:\n\n ");
+			System.out.println("1. Katherine Brown ");
+			System.out.println("2. Katherine Anderson ");
+			System.out.println("3. Synthia Gato-Paella \n\n\n\n\n");
+			// read the value
+			theInput2 = sc2.nextInt();
+			// check the value
+			String Option2= "\n*”Judge”*\n"+
+						"I am sorry Mr. Anderson, but that is not\n"+
+						"the victim's mane,\n\n\n"+
+						"please try again\n\n\n";
+			
+			switch(theInput2) 
+			{
+				case 1:
+					name= false;
+					theGame2();//this calls the second set of texts
+					name=false;//this ends the loop
+					break;
+				
+				case 2:
+					slowPrint(Option2, 1);
+					try				
+					{				
+					Thread.sleep(3000);				
+					}				
+					catch (InterruptedException e)				
+					{			
+						e.printStackTrace();
+					}
+					System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+					break;
+					
+				case 3:
+					slowPrint(Option2, 1);
+					try				
+					{				
+					Thread.sleep(3000);				
+					}				
+					catch (InterruptedException e)				
+					{			
+						e.printStackTrace();
+					}
+					System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+					break;
+					
+				default:
+					System.out.println("Invalid option, please try again");
+			}
+		}
+	}
+	
+	public static void theGame2()//here starts the second set of texts
+	{
+		String [] Texts2;
+		Texts2= new String[19];
+		Texts2[0]=  "*”Judge”*\n"+
+					"Correct!\n"+
+					"Well done, lets continue with the trial.\n"; 
+		Texts2[1]=  "*”Judge”*\n"+
+					"First a question for Mr. Martin, from the prosecution.\n\n"+ 
+					
+					"According to the case\n"+
+					"the victim was struck with\n"+
+					"a blunt instrument.\n"+
+					"Would you explain to the court\n"+
+					"just what this instrument was?\n";
+		Texts2[2]=  "*”Martin”*\n"+
+					"Yes, Your Honour.\n\n"+
+					
+					"The murder weapon is this\n"+
+					"statue of a 'Fortune cat.'\n\n"+
+					
+					"It was found lying on the\n"+
+					"floor, next to the victim\n"+ 
+					"with her blood on it as confirmed by DNA tests.\n\n"
+					+ "According to the autopsy report\n"+
+					"The victim’s time of death was between\n"+
+					"4pm – 5pm \n\n\n";
+		Texts2[3]=  "     ________________________________________________\n"+
+				    "    |     //Autopsy report added to the Court Record |\n"+
+				    "     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n"+
+				
+					"        |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+					"        | VICTIM'S AUTOPSY: The victim’s time of death          |\n"+
+					"        | was between 4pm – 5pm.                                |\n"+
+					"        |_______________________________________________________|\n\n";
+		
+		Texts2[4]=	"*”Judge”*\n"+
+					"I see... the court accepts the statue\n"+
+					"into evidence.\n";
+		
+		Texts2[5]=		"     ________________________________________\n"+
+						"    |     //Statue added to the Court Record |\n"+
+						"     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n"+
+						
+				     "        |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+                     "        | FORTUNE CAT STATUE: A statue shaped as a 'Fortune Cat'|\n"+
+					 "        | it's rather heavy.                                    |\n"+
+					 "        |_______________________________________________________|\n\n\n"+
+             		
+							"|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+							"| tip: pay attention to any evidence |\n"+
+							"| added during the trial.            |\n"+
+							"|____________________________________|\n\n";
+		
+		Texts2[6]=  "*”Judge”*\n"+
+
+					"Mr. Martin, the prosecution\n"+
+					
+					"may call the defendant to the stand.\n";
+		
+		Texts2[7]=  "*”Martin”*\n"+
+					"The prosecution calls the\n"+
+					"defendant, Mr. Bob Wilson, to the\n"+
+					"stand.\n\n\n";
+		
+		Texts2[8]=	"     __________________________________\n"+
+					"    | Mr. Bob Wilson enters the stand. |\n"+
+					"     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n";
+		
+		Texts2[9]=  "*”Martin”*\n"+
+					"Mr. Wilson, is it not true that\n"+
+					"the victim had recently ended\n"+ 
+					"Your relationship?\n\n";
+		
+		Texts2[10]=  "*”Wilson*”\n"+
+					"(sad face)\n"+
+					"Yes!\n\n";
+		
+		Texts2[11]=	"*”Martin”*\n"+
+					"So that’s a good motive for you to kill her.\n\n";
+
+		Texts2[12]=	"*”Wilson*”\n"+
+					"I would never do anything to hurt her. I still love her.\n\n";
+		
+		Texts2[13]= "*”Martin”*\n"+
+					"In fact, she had completely\n"+
+					"abandoned you... and was\n"+
+					"seeing other men\n\n";
+
+		Texts2[14]=	"*”Wilson*”\n"+
+					"That’s not true. She still loved me.\n"+
+				    "We were just having problems....(cries...)\n\n";
+
+		Texts2[15]=	"*”Anderson*” (you)\n"+
+					"     ____________\n"+
+					"    | OBJECTION! |\n"+
+					"     ¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+					"Your honour! My client was unaware of any\n"+
+					"Such relationship. The fact of whether she was or was not\n"+
+					"Seeing another man has no bearing on my clients state of mind\n"+
+					"On the night in question.\n\n";
+		
+
+		Texts2[16]=	"*”Wilson*”\n"+
+					"Your manipulating the facts to suit your case prosecutor!\n\n";
+		
+		Texts2[17]= "*”Judge”*\n"+
+					"     ________\n"+
+					"    | ORDER! |\n"+
+					"     ¯¯¯¯¯¯¯¯\n\n"+
+					"Order in the Court!!\n"+
+					"Let's continue with the trial,\n"+
+					"shall we?\n\n";
+		
+		Texts2[18]= "*”Martin”*\n"+
+					"Next question!\n\n"+
+					
+					"You went to the victim's\n"+
+					"apartment on the day of\n"+
+					"the murder, did you not?\n\n";
+				
+		for(int b=0;b<Texts2.length;b++){
+			slowPrint(Texts2[b], 1);
+			System.out.println("\n....Press Enter to continue");
+			pressEnter("");//this prints the strings using the slowPrint method
+		}
+	
+		sc3 = new java.util.Scanner(System.in);
+		int theInput3;
+		
+		boolean select= true;
+		while (select) 
+		{
+			// show the menu
+			System.out.println(	" ______________________\n"+
+								"| Select (type) 1 or 2)|\n"+
+								" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
+			System.out.println("1. Yes");
+			System.out.println("2. No");
+			// read the value
+			theInput3 = sc3.nextInt();
+			// check the value
+			
+			String Option4= "*”Wilson*”\n"+
+							"Yes I did but she wasn't home.\n\n";
+						
+			
+			switch(theInput3) 
+			{
+				case 1:
+				select= false;
+				slowPrint(Option4, 3);
+				System.out.println("....Press enter to continue");
+				pressEnter("");
+				theGame3();	
+				break;
+				
+				case 2:
+				theGame3();//this calls the third set of texts
+				select=false;
+				break;
+				
+				default:
+					System.out.println("Invalid option, please try again");
+			}
+		}
+	}
+	
+	public static void theGame3()//here starts the third set of texts
+	{
+		sc4 = new java.util.Scanner(System.in);	
+		String [] Texts3;
+		Texts3= new String[20];
+		
+		Texts3[0]=  "*”Martin”*\n"+
+
+						"Your Honour, I believe the defendant is lying.\n";
+		
+		Texts3[1]=  "\n*”Judge”*\n"+
+					"What proof do you have that Mr. Wilson is Lying?\n";
+
+		
+		Texts3[2]=  "\n*”Martin”*\n"+
+					"The prosecution would like\n"+
+					"to call an eye witness to the stand who saw the\n"+
+					"Defendant on the night in question.\n";
+		
+		Texts3[3]=  "\n*”Judge”*\n"+
+					"Well, that simplifies matters.\n"+
+					"Who is your witness?\n";
+		
+		Texts3[4]=  "\n*”Martin”*\n"+
+					"The man who found the victim's body.\n"+
+					"Just before making the\n"+
+					"gruesome discovery\n"+
+					"He saw Mr. Wilson fleeing\n"+
+					"the scene of the crime!\n";
+		
+		Texts3[5]= "     _________________________________________________________\n"+
+				   "    |      //murmers of surprise rise from those watching     |\n"+
+			       "     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n"+
+					"\n\n\n*”Judge”*\n"+
+					"     ________\n"+
+					"    | ORDER! |\n"+
+					"     ¯¯¯¯¯¯¯¯\n\n"+
+					"Order in the court!\n\n"+
+					
+					"Mr. Martin, the prosecution may call its witness.\n";
+		
+		Texts3[6]=  "\n*”Martin”*\n"+
+					"Yes, your honour\n"+
+					"On the day of the murder, my\n"+
+					"witness was selling paellas\n"+
+					"at the victim's building.\n\n\n"+
+					"Please bring Mr. Jack Smith\n"+
+					"to the stand!\n";
+
+		Texts3[7]=  "     ____________________________________\n"+
+				    "    |    //Mr. Smith enters the stand....|\n"+
+			        "     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n"+
+			        "      \n\n";
+		
+		Texts3[8]=  "\n*”Martin”*\n"+
+					"Mr. Smith, would you mind telling the court\n"+
+					"Exactly what happened on the day of the murder?\n";
+		
+		Texts3[9]=  "\n*”Smith”*\n"+
+					"Oh, oh yes";
+		
+		Texts3[10]= "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+					"         ______________________\n"+
+					"        | Episode 3: The facts |\n"+
+					"         ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n\n\n\n\n\n\n\n\n\n";
+		
+		Texts3[11]= "          ___________________\n"+
+                    "         | WITNESS TESTIMONY |\n"+
+				    "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+
+					"\n*”Smith”*\n"+
+					"I was selling paella subscriptions when\n"+ 
+					"I saw a man fleeing an apartment.\n"+
+					"I though he must be in a hurry because he\n"+ 
+					"left the door half-open behind him. I found this behaviour quite odd,\n"+ 
+					"I looked inside the apartment and found\n"+
+					"a woman dead, lying on the floor.\n"
+					+ "I was afraid and I couldn’t go \n"
+					+ "inside the room. I checked the phone in her apartment \n"+
+					 "and it wasn’t working so I went to a nearby \n"+
+					"park and called the police from a public phone. \n"+
+					"I remember the time exactly: it was 1:00 Pm.\n\n\n"+
+					
+					
+					"          __________________________\n"+
+					"         | END OF WITNESS TESTIMONY |\n"+
+					"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n";
+										
+		Texts3[12]= "\n*”Judge”*\n"+
+					"Incidentally, why wasn't\n"+
+					"the phone in the victims\n"+
+					"apartment working?\n";
+		
+		Texts3[13]= "\n*”Martin”*\n"+
+					"Your honour, at the time of\n"+
+					"the murder, there was a\n"+
+					"blackout in the building and the phone was a cordless phone.\n";
+		
+		Texts3[14]= "\n*”Judge”*\n"+
+                    "A blackout?\n";
+		
+		Texts3[15]= "\n*”Martin”*\n"+
+					"Yes, your Honour...\n\n"+
+					
+					"I have a record of the\n"+
+					"blackout, for your perusal.\n";
+		
+		Texts3[16]=  "     __________________________________________________\n"+
+				     "    |     //Blackout report added to the court record. |\n"+
+				     "     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n"+
+					
+				     "        |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+		             "        | BLACKOUT REPORT: Electricity to Ms.Brown’s building   |\n"+
+					 "        | was out from noon to 6PM on the day of the crime.     |\n"+
+					 "        |_______________________________________________________|\n\n\n"+
+							 
+					 "|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+					 "| //**Remember to pay attention to the evidence      |\n"+
+					 "| added to the case.  The evidence is what will help |\n"+
+					 "| to solve the case!**//                             |\n"+
+				  	 "|____________________________________________________|\n\n\n";
+		
+		Texts3[17]= "\n*”Judge”*\n"+
+					"Now, Mr. Anderson...\n"+
+					"You may begin your\n"+
+					"Cross-examination\n";
+		
+		Texts3[18]= "\n*”Anderson*” (you)\n"+
+					"Yes! Your Honour\n";
+		
+		Texts3[19]= "|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+
+				    "| //** During the Cross Examination try to find  |\n"+
+				    "| incoherencies in the previous                  |\n"+
+				    "| witness testimony using the evidence           |\n"+
+				    "| added to the court records.                    |\n"+
+				    "|                                                |\n"+
+				    "| Whenever you see in the cross examination      |\n"+
+				    "| that the witness is lying,                     |\n"+
+				    "| present the adequate piece of evidence         |\n"+
+				    "| in order to proceed.                           |\n"+
+				    "|                                                |\n"+
+				    "| If you present 5 incorrect pieces              |\n"+
+				    "| of evidence you will lose the case!            |\n"+
+				    "|                                                |\n"+
+				    "|                                                |\n"+
+				    "|Choose wisely!**//                              |\n"+
+			  	    "|________________________________________________|\n\n\n";
+				
+		
+		for(int c=0;c<Texts3.length;c++){
+			slowPrint(Texts3[c], 1);
+			System.out.println("\n....Press Enter to continue");
+			pressEnter("");//this prints the strings using the slowPrint method
+		
+		}
+		
+		boolean restartLoop= true;//this loop keeps the cross examination live
+		                  //in case the player don't present any relevant evidence
+		while (restartLoop){
+			restartLoop= false;
+		
+			String crossExamination1= "          __________________________\n"+
+									  "         | CROSS EXAMINATION STARTS |\n"+
+				                      "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+	
+									"I was selling paella subscriptions when\n"+
+									"I saw a man fleeing an apartment.\n\n\n"+
+									" ___________________________________\n"+
+									"| Do you agree with this statement? |\n"+
+				                    " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n"+
+								 //(no correct evidence in this question)
+								  "1) YES\n\n"
+								+ "2) NO\n";
+			
+			String judge1= "\n*”Judge”*\n"+
+							   "What do you disagree with?\n\n\n"+
+							    " ____________________________________________________\n"+
+								"| //Select one of the following evidences to present |\n"+
+								"| and show why the witness is lying                  |\n"+
+			                    " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n"+
+					
+									"1)	The fortune Cat statue\n"+
+									"2)	Blackout report\n"+
+									"3)	Victim’s autopsy\n"+
+									"4)	See evidence\n"+
+									"5)	Cancel this action\n";
+	
+			String Judge2= "\n*”Judge”*\n"+
+								"I do not see any inconsistencies in\n"+
+								"the witness testimony and the evidence\n"+
+								"you presented.\n\n"+
+								"Objection overruled!!!\n\n"+
+								"....Press enter to continue\n\n";
+	
+			
+			slowPrint(crossExamination1, 1);
+		
+			int theInput4=sc4.nextInt();
+			int answers1;
+			
+			boolean agree= true;//this keeps the first round of the cross examination live
+			while (agree)
+				if (theInput4== 1){
+					agree = false;//this closes the first round loop and continues the cross examination
+				
+				}
+				else
+				{
+					slowPrint(judge1, 1);
+					answers1= sc4.nextInt();
+					if (answers1== 1 || answers1== 2 || answers1== 3){
+					slowPrint(Judge2, 1);
+					pressEnter("");
+					counter--;//this take off one life
+					gameOver();//this calls the gameOver method
+					
+					}
+					else if (answers1== 4 ){
+						evidences();//this calls and shows the evidences to the player
+					}
+					else if (answers1== 5){
+						agree= false;//this closes the first round loop and continues the cross examination
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+					}
+				} 
+			
+			String  crossExamination2= "          __________________________________\n"+
+									   "         | //Cross Examination continues... |\n"+
+					                   "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"
+				
+									  + "I though he must be in a hurry because\n"+
+										"he left the door half-open behind him.\n\n"+// (no correct evidence in this question)
+										" ___________________________________\n"+
+										"| Do you agree with this statement? |\n"+
+										" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+										"1)=yes\n\n"+
+										"2)=no\n";
+	
+			slowPrint(crossExamination2, 1);
+	
+			
+			int theInput5=sc4.nextInt();
+			int answers2;
+			
+			boolean agree2= true;//this keeps the second round of cross examination live
+			while (agree2)
+				if (theInput5== 1)
+					agree2 = false;//this closes the second round loop and continues the cross examination
+				else
+				{
+					slowPrint(judge1, 1);
+					answers2= sc4.nextInt();
+					
+					if (answers2== 1 || answers2== 2 || answers2== 3){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//takes off one live
+						 gameOver();//calls the gameOver method
+					}
+					else if (answers2== 4 ){
+						evidences();//shows evidences to the player
+					}
+					else if (answers2== 5){
+						agree2= false;//closes the second round loop and continues the cross examination
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+					}
+				} 
+			
+			String  crossExamination3= "          __________________________________\n"+
+					                   "         | //Cross Examination continues... |\n"+
+				                   	   "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+				                   	"I found this behaviour quite odd,\n"+ 
+									"I looked inside the apartment and found\n"+
+									"a woman dead, lying on the floor.\n"
+									+ "I was afraid and I couldn’t go \n"
+									+ "inside the room. I checked the phone in her apartment \n"+
+									 "and it wasn’t working so I went to a nearby \n"+
+									"park and called the police from a public phone. \\n\n\n"+ //(no correct evidence in this question)
+	
+										" ___________________________________\n"+
+										"| Do you agree with this statement? |\n"+
+										" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+										"1)=yes\n\n"+
+										"2)=no\n";
+										
+			slowPrint(crossExamination3, 1);
+			
+			int theInput6=sc4.nextInt();
+			int answers3;
+
+			boolean agree3= true;//this keeps the third round of cross examination live
+			while (agree3)
+				if (theInput6== 1)
+					agree3 = false;//this closes the third round loop and continues the cross examination
+				else
+				{
+					slowPrint(judge1, 1);
+					answers3= sc4.nextInt();
+					if (answers3== 1 || answers3== 2 || answers3== 3){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//takes off one live
+						gameOver();//calla the gameOver method
+					}
+					else if (answers3== 4 ){
+						evidences();//shows evidences to the player
+					}
+					else if (answers3== 5){
+						agree3= false;//closes the third round loop and continues the cross examination
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+					}
+				} 
+			
+			
+			String  crossExamination4=  "          __________________________________\n"+
+					    			    "         | //Cross Examination continues... |\n"+
+				    			    	"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+	
+										 "I remember the time exactly: it was 1:00 Pm\n\n\n"+
+										" ___________________________________\n"+
+										"| Do you agree with this statement? |\n"+
+										" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+										"1)yes\n\n"+
+										"2)no\n";				
+			slowPrint(crossExamination4, 1);
+			
+			int theInput7=sc4.nextInt();
+			int answers4;
+			
+			boolean agree4= true;//this keeps the fourth round of cross examination live
+			while (agree4)
+				if (theInput7== 1){
+					agree4 = false;//this ends the fourth round loop and shows the following to the player
+					String noEvidennce= "\n*”Judge”*\n\n"+
+										"Mr Anderson, you have not presented a relevant \n"+
+										"evidence to prove you client is innocent. \n\n\n"+
+										
+										"Then… do you think Mr Wilson is guilty?\n\n"+
+											"1) Yes\n\n"+ //end of the game
+											"2) No\n\n\n"; // judge dialogue
+					slowPrint(noEvidennce,1);
+					sc1 = new java.util.Scanner(System.in);
+					int theInputA;
+					theInputA = sc1.nextInt();
+				
+					if (theInputA==1){
+						System.out.println("game over");
+						System.exit(0);//this ends the app
+					}
+					else if (theInputA==2){
+						restartLoop= true;//this makes the whole cross examination loop restart again
+						String ReCross= "\n*”Judge”*\n\n"+
+										"Please, re-start your cross examination again.\n\n";
+					slowPrint(ReCross,1);	
+					}
+				}
+				else
+				{
+					slowPrint(judge1, 1);
+					answers4= sc4.nextInt();
+					if (answers4== 1 || answers4== 2){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//takes off one live
+						gameOver();//calls the gameOver method
+
+					}
+					else if (answers4== 3)
+					{
+						theGame4();//this calls the fourth set of texts
+						agree4=false;
+					}
+					else if (answers4== 4 ){
+						evidences();//shows evidences to the player
+					}
+					else if (answers4== 5){
+						agree4= false;//this ends the fourth round loop and continues the cross examination
+						restartLoop= true;//this restart the whole crossexamination loop
+						String noEvidennce= "\n*”Judge”*\n\n"+
+								"Mr Anderson, you have not present a relevant \n"+
+								"evidence to prove you client is innocent. \n\n\n"+
+								
+								"Then… do you think Mr Wilson is guilty?\n\n"+
+									"1) Yes\n\n"+ //end of the game
+									"2) No\n\n\n"; // judge dialogue
+						slowPrint(noEvidennce,1);
+						
+						sc12 = new java.util.Scanner(System.in);
+						int theInputA;
+						theInputA = sc12.nextInt();
+									
+						if (theInputA==1){
+							System.out.println("game over");
+							System.exit(0);//this ends the app
+						}
+						else if (theInputA==2){
+							restartLoop= true;//this makes the whole cross examination loop restart again
+							String ReCross= "\n*”Judge”*\n\n"+
+											"Please, re-start your cross examination again.\n\n";
+
+							slowPrint(ReCross,1);
+						}
+					}
+						else
+						{
+							String invalidAnswer= "That is not a valid answer\n"+
+						                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+						}
+						
+					}
+					
+		}//belongs to the restartLoop While
+	}//belongs to the theGame3 method
+
+	public static void theGame4()//this starts the fifth set of texts
+	{
+		sc5 = new java.util.Scanner(System.in);	
+		String [] Texts4;
+		Texts4= new String[8];
+		
+		Texts4[0]= "*”Anderson*” (you)\n\n"+
+				    "          ________________\n"+
+    			    "         |  !!Objection!! |\n"+
+			    	"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+					
+					"Frankly, I find that\n"+
+					"hard to believe!\n"+
+					"Your statement directly\n"+
+					"contradicts the autopsy report.\n\n"+
+
+					"The autopsy notes the time\n"+
+					"of death at sometime after 4PM.\n\n"+
+					
+					"There was nobody to... er...\n"+
+					"no 'body' to find at 1:00 PM!\n\n"+
+
+					"How do you explain this\n"+
+					"three-hour gap?\n\n";
+
+	    Texts4[1]=	"*”Smith”*\n\n"+
+				    "Oh, that! Oh, er...\n\n";
+
+		Texts4[2]=	"*”Martin”*\n\n\n"+
+				    "          ________________\n"+
+    			    "         |  !!Objection!! |\n"+
+			    	"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+					"This is trivial! The witness\n"+
+					"merely forgot the time!\n\n";
+
+		Texts4[3]=  "*”Judge”*\n\n"+
+					"After his testimony, I find\n"+
+					"that hard to believe.\n\n"+
+					"Mr. Smith...\n"+
+
+					"Why were you so certain\n"+
+					"that you found the body\n"+
+					"at 1:00 PM?\n\n";
+
+		Texts4[4]=  "*”Smith”*\n\n"+
+					"I.. er... well, I...\n"+
+					"Gee, that's a really good\n"+
+					"question!...\n\n"+
+					"Wait!\n"+
+					"I remember now!\n\n";
+
+	    Texts4[5]=	"*”Judge”*\n\n"+
+		    		"Would you care to give\n"+
+		    		"your testimony again?\n\n";
+
+	    Texts4[6]=  "          _____________________\n"+
+                    "         | WITNESS TESTIMONY 2 |\n"+
+			        "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+			        "*”Smith”*\n\n"+
+					
+					"You see, when I found the "+
+					"body,\n"+ 
+					"There was a voice saying the\n"+
+					"time... It was probably\n"+
+					"coming from the television.\n\n"+
+					"I guess the victim must\n"+
+					"have been watching a show\n"+
+					"or something!\n\n"+
+					"That's why I thought\n"+
+					"it was 1:00 PM!\n\n"+
+					"Terribly sorry about\n"+
+					"the misunderstanding...\n\n\n"+
+
+					"          ____________________________\n"+
+					"         | END OF WITNESS TESTIMONY 2 |\n"+
+					"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n";
+
+	    
+	    Texts4[7]=  "*”Judge”*\n\n"+
+		    		"Mr. Anderson,\n"+
+	    		    "you may cross-examine the witness.\n\n";
+	    
+	    for(int d=0;d<Texts4.length;d++){
+			slowPrint(Texts4[d], 1);
+			System.out.println("\n....Press Enter to continue");
+			pressEnter("");
+		
+		}
+	    
+	    boolean restartLoop10= true;//this keeps the whole second cross examination loop live
+		while (restartLoop10){
+			restartLoop10= false;
+			String crossExamination10=  "          _____________________\n"+
+										"         | CROSS EXAMINATION 2 |\n"+
+										"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+		
+									"You see, when I found the body, \n"+
+									"There was a voice saying the time...\n\n\n "+
+								
+								" ___________________________________\n"+
+								"| Do you agree with this statement? |\n"+
+								" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n" //(no correct evidence in this question)
+								+ "1) YES\n\n"
+								+ "2) NO";
+			
+			String judge1= "\n*”Judge”*\n"+
+							   "What do you disagree with?\n\n\n"
+							   + "    //Select one of the following evidences to present\n"+
+							     "    and show why the witness is lying\n\n"+
+		
+									"1)	The fortune Cat statue\n"+
+									"2)	Blackout report\n"+
+									"3)	Victim’s autopsy\n"+
+									"4)	See evidences\n"+
+									"5)	Cancel this action\n";
+		
+			String Judge2= "\n*”Judge”*\n"+
+								"I do not see any incoherence between\n"+
+								"the witness’s testimony and the evidence\n"+
+								"you present.\n\n"+
+								"Objection overruled!!!\n\n"+
+								"....Press enter to continue\n\n";
+		
+			slowPrint(crossExamination10, 1);
+		
+			int theInput10=sc5.nextInt();
+			int answers10;
+			
+			boolean agree10= true;//this keeps the first round of the second cross examination live
+			while (agree10)
+				if (theInput10== 1){
+				agree10 = false;
+				}
+				else
+				{
+					slowPrint(judge1, 1);
+					answers10= sc5.nextInt();
+					
+					if (answers10== 1 || answers10== 2 || answers10== 3){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//takes off one live
+						 gameOver();//calls gameOver method
+					}
+					else if (answers10== 4 ){
+						evidences();//shows evidences to the player
+					}
+					else if (answers10== 5){
+						agree10= false;//closes the first loop and continues with the second cross examination
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+					}
+				}
+
+			String  crossExamination2= "          _________________________________\n"+
+					                   "         | CROSS EXAMINATION 2 CONTINUES...|\n"+
+					                   "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"
+		
+									 + "There was a voice saying the\n"+
+									 "time... It was probably\n"+
+									 "coming from the television.\n"+
+									 "I guess the victim must\n"+
+									 "have been watching a show\n"+
+									 "or something!\n\n"+   
+									   " _____________________________________\n"+
+					                   "| -	Do you agree with this statement? |\n"+
+					                   " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+									
+										"1)=yes\n\n"+
+										"2)=no\n";
+				
+			slowPrint(crossExamination2, 1);
+			
+			int theInput20=sc5.nextInt();
+			int answers20;
+			
+			boolean agree20= true;//keeps the second round of the second cross examination live
+			while (agree20)
+				if (theInput20== 1)
+					agree20 = false;//closes the second round loop and continues the second cross examination
+				else
+				{
+					slowPrint(judge1, 1);
+					answers20= sc5.nextInt();
+					
+					if (answers20== 2)
+					{
+						theGame50();//this calls the sixth set of texts
+						agree20 = false;
+					}					
+					else if (answers20== 1  || answers20== 3){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//take off one live
+						 gameOver();//calls the gameOver method	
+					}
+					else if (answers20== 4 ){
+						evidences();//shows evidences to the player
+					}
+					else if (answers20== 5){
+							agree20= false;//closes second round lopp and continues with the second corss examination	
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+					}
+				} 
+
+			String  crossExamination4=  "          _________________________________\n"+
+							        "         | CROSS EXAMINATION 2 CONTINUES...|\n"+
+						        	"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+									" That's why I thought\n"+
+									"it was 1:00 PM!\n\n"+
+									"Terribly sorry about\n"+
+									"the misunderstanding...\n\n\n"+
+									 
+									" _______________________________________\n"+
+									"| -	Do you agree with this statement?   |\n"+
+									" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+									"1)yes\n\n"+
+									"2)no\n";
+			
+			slowPrint(crossExamination4, 1);
+
+			
+			int theInput30=sc5.nextInt();
+			int answers30;
+				
+			boolean agree30= true;//this keeps the third round of the second cross examination live
+			while (agree30)
+				if (theInput30== 1){
+					agree30 = false;//this closes the third round loop and continues the second cross examination
+					String noEvidennce= "\n*”Judge”*\n\n"+
+										"Mr. Anderson, you have not present a relevant \n"+
+										"evidence to prove you client is innocent. \n\n\n"+
+										
+										"Then… do you think Mr Wilson is guilty?\n\n"+
+											"1) Yes\n\n"+ //end of the game
+											"2) No\n\n\n"; // judge dialogue
+					slowPrint(noEvidennce,1);
+					sc13 = new java.util.Scanner(System.in);
+					int theInputA;
+					theInputA = sc13.nextInt();
+					
+					if (theInputA==1){
+						System.out.println("game over");
+						System.exit(0);//this ends the app	
+					}
+					else if (theInputA==2){
+						restartLoop10= true;
+						String ReCross= "\n*”Judge”*\n\n"+
+										"Please, re-start your cross examination again.\n\n";
+					slowPrint(ReCross,1);
+						
+					}
+				}
+				else
+				{
+					slowPrint(judge1, 1);
+					answers30= sc5.nextInt();
+					if (answers30== 1 || answers30== 2|| answers30== 3){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//takes off one live
+						 gameOver();//calls the gameOVer method
+					}
+					else if (answers30== 4 ){
+						evidences();//shoes evidences to the player
+					}
+					else if (answers30== 5){
+						agree30= false;//closes the third round loop and continues the second cross examination
+						restartLoop10=true;//this restart the whole second cross examination loop
+						
+						String noEvidennce= "\n*”Judge”*\n\n"+
+								"Mr Anderson, you have not present a relevant \n"+
+								"evidence to prove you client is innocent. \n\n\n"+
+								
+								"Then… do you think Mr Wilson is guilty?\n\n"+
+									"1) Yes\n\n"+ //end of the game
+									"2) No\n\n\n"; // judge dialogue
+						
+								slowPrint(noEvidennce,1);
+								sc14 = new java.util.Scanner(System.in);
+								int theInputA;
+								theInputA = sc14.nextInt();
+								
+								if (theInputA==1){
+									System.out.println("game over");
+									System.exit(0);//this ends the app
+								}
+								else if (theInputA==2){
+									restartLoop10= true;//this makes the whole cross examination loop restart again
+									String ReCross= "\n*”Judge”*\n\n"+
+													"Please, re-start your cross examination again.\n\n";
+						
+								slowPrint(ReCross,1);
+								}
+						
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+					slowPrint(invalidAnswer, 1);
+					System.out.println("....Press enter to continue");
+					pressEnter("");
+					}
+					
+				}
+		}//belongs to the restartLoop10
+	}//belongs theGame4 method
+
+	public static void theGame50()//this starts the sixth set of texts
+	{
+		sc6 = new java.util.Scanner(System.in);
+		String [] Texts50;
+		Texts50= new String[12];
+		
+		Texts50[0]= "*”Anderson*” (you)\n\n"+
+				   " ____________________\n"+
+                   "|      OBJECTION!!!  |\n"+
+                   " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+					
+					"Hold it right there!\n"+
+					"The prosecution has said there was a\n"+ 
+					"blackout at the time of the discovery\n"+
+					"and the blackout report proves it!.\n";
+		
+		Texts50[1]= "*”Smith”*\n\n"+
+				    "*gulp*\n\n";
+		
+		Texts50[2]= "*”Anderson*” (you)\n\n"+
+				    "You could not have heard a television.\n\n";
+		
+		Texts50[3]= "*”Smith”*\n\n"+
+				    "Oh, well… urk!\n\n";					
+				    
+		Texts50[4]=	"*”Judge”*\n\n"+
+					"The defence has a point\n\n"+
+					"Do you have an explanation for this, Mr. Smith?.\n\n";
+
+		Texts50[5]=	"*”Smith”*\n\n"+
+					"(nervous voice)\n"+ 
+					"No, I..I find it quite\n"+
+					"Puzzling myself! Quite!\n\n"+
+					".. .\n\n"+
+					"W-wait!!\n"+
+					"I remember now!\n\n";
+		
+		Texts50[6]= "*”Judge”*\n\n"+
+					"Mr Smith?\n"+
+					"The court would prefer to hear \n"+
+					"an accurate testimony from the\n"+
+					"very beginning. This constant\n"+
+					"corrections are harming your\n"+
+					"credibility\n\n"+
+					
+					"That, and you seem\n"+
+					"rather... distraught.\n\n";
+		
+		Texts50[7]= "*”Smith”*\n\n"+
+					"M-my apologies, Your Honour!\n"+
+					"It... er, it must have\n"+
+					"been the shock of finding\n"+
+					"the body!\n\n";
+
+		Texts50[8]= "*”Judge”*\n\n"+
+					"Very well, Mr. Smith.\n\n"+
+					
+					"Let's hear your testimony\n"+
+					"once more please\n\n";
+		
+		Texts50[9]= "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+		            "          ____________________\n"+
+                    "         | CHAPTER 4: THE LIGHT|\n"+
+                    "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+
+		Texts50[10]="          ____________________\n"+
+                    "         | WITNESS TESTIMONY 3|\n"+
+                    "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+					"*”Smith”*\n\n"+
+					"Actually, I didn't 'hear'\n"+
+					"the time... I 'saw' it!\n\n"+
+					"There was a table clock in\n\n"+
+					"Yeah, the murder weapon!\n"+
+					"The killer used it to\n"+
+					"hit the victim!\n"+
+					"That must have\n"+
+					"been what I saw.\n\n\n"+
+					
+					"          ___________________________\n"+
+					"         | END OF WITNESS TESTIMONY 3|\n"+
+					"          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n\n";
+								
+		Texts50[11]="*”Judge”*\n\n"+
+					"Mr Anderson, you may begin with you cross examination\n\n\n\n";
+		
+		for(int d=0;d<Texts50.length;d++){//prints the strings using the slowPrint method
+			slowPrint(Texts50[d], 1);
+			System.out.println("\n....Press Enter to continue");
+			pressEnter("");
+		}
+
+		boolean restartLoop60= true;//this keeps the whole cross examination 3 loop live
+		while (restartLoop60){
+			restartLoop60= false;
+			String crossExamination60= "          ____________________\n"+
+									   "         | CROSS EXAMINATION 3|\n"+
+									   "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+										"Actually, I didn't ,hear'\n"+
+										"the time... I 'saw' it!\n"+
+										"There was a table clock in\n\n"+// (no correct evidence in this question)
+										
+										" __________________________________\n"+
+										"| Do you agree with this statement?|\n"+
+										" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+ //(no correct evidence in this question)
+										  "1) YES\n\n"
+										+ "2) NO";
+			
+			String judge1= "\n*”Judge”*\n"+
+							"What do you disagree with?\n\n\n"
+							+ "    //Select one of the following evidences to present\n"+
+							"    and show why the witness is lying\n\n"+
+							
+							"1)	The fortune Cat statue\n"+
+							"2)	Blackout report\n"+
+							"3)	Victim’s autopsy\n"+
+							"4)	See evidences\n"+
+							"5)	Cancel this action\n";
+			
+			String Judge2= "\n*”Judge”*\n"+
+							"I do not see any incoherence between\n"+
+							"the witness’s testimony and the evidence\n"+
+							"you present.\n\n"+
+							"Objection overruled!!!\n\n"+
+							"....Press enter to continue\n\n\n";
+	
+			slowPrint(crossExamination60, 1);
+
+			int theInput70=sc6.nextInt();
+			int answers70;
+			
+			boolean agree70= true;//this keeps the first round of the cross examination 3 live
+			while (agree70)
+				if (theInput70== 1){
+					agree70 = false;//this closes the first round loop and continues with the cross examination 3			
+				}
+				else
+				{
+					slowPrint(judge1, 1);
+					answers70= sc6.nextInt();
+					if (answers70== 1 || answers70== 2 || answers70== 3){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//takes off one live
+						gameOver();//calls the gameOver method	
+					}
+					else if (answers70== 4 ){
+						evidences();//shows evidence to the player
+					}
+					else if (answers70== 5){
+						agree70= false;//this closes the first round loop and continues with the cross examination 3
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+					}
+				} 
+				
+				String  crossExamination70= "          _________________________________\n"+
+										    "         | CROSS EXAMINATION 3 CONTINUES...|\n"+
+										    "          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+										  "Yeah, the murder weapon!\n"+
+										 "The killer used it to\n"+
+										 "hit the victim!\n"+
+										 "That must have\n"+
+										 "been what I saw.\n\n"+
+		
+										 " ______________________________________\n"+
+										 "| -	Do you agree with this statement?|\n"+
+										 " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+							
+										"1)=yes\n\n"+
+										"2)=no\n";
+				slowPrint(crossExamination70, 1);
+
+				int theInput80=sc6.nextInt();
+				int answers80;
+
+				boolean agree80= true;//this keeps the second round of the cross examination 3 live
+				while (agree80)
+				if (theInput80== 1){
+					agree80 = false;//this closes the second round loop and continues with the cross examination 3
+					String noEvidennce= "\n*”Judge”*\n\n"+
+										"Mr Anderson, you have not present a relevant \n"+
+										"evidence to prove you client is innocent. \n\n\n"+
+										
+										"Then… do you think Mr Wilson is guilty?\n\n"+
+											"1) Yes\n\n"+ //end of the game
+											"2) No\n\n\n"; // judge dialogue
+					slowPrint(noEvidennce,1);
+					sc15 = new java.util.Scanner(System.in);
+					int theInputA;
+					theInputA = sc15.nextInt();
+					
+					if (theInputA==1){
+						System.out.println("game over");
+						System.exit(0);//this ends the app
+					}
+					else if (theInputA==2){
+						restartLoop60= true;//this restart the whole cross examination 3 loop
+						String ReCross= "\n*”Judge”*\n\n"+
+										"Please, re-start your cross examination again.\n\n";
+						slowPrint(ReCross,1);	
+					}	
+				}
+				else
+				{
+					slowPrint(judge1, 1);
+					answers80= sc6.nextInt();
+					if (answers80== 1)
+					{
+						theGame90 ();//this calls the seventh set of texts
+						agree80=false;//this closes the second round of the cross examination 3
+						System.out.println("the end");
+						System.exit(0);//this ends the app
+					}
+					else if (answers80== 2|| answers80== 3){
+						slowPrint(Judge2, 1);
+						pressEnter("");
+						counter--;//takes off one live
+						 gameOver();//calls the gameOver loop
+					}				
+					else if (answers80== 4 ){
+						evidences();//shows evidences to the player
+					}
+					else if (answers80== 5){
+						agree80= false;//this closes the second round of the cross examination 3
+						restartLoop60=true;//this restarts the whole cross examination3 loop
+						
+						String noEvidennce= "\n*”Judge”*\n\n"+
+								"Mr Anderson, you have not present a relevant \n"+
+								"evidence to prove you client is innocent. \n\n\n"+
+								
+								"Then… do you think Mr Wilson is guilty?\n\n"+
+									"1) Yes\n\n"+ //end of the game
+														"2) No\n\n\n"; // judge dialogue
+								slowPrint(noEvidennce,1);
+								sc16 = new java.util.Scanner(System.in);
+								int theInputA;
+								theInputA = sc16.nextInt();
+								
+								if (theInputA==1){
+									System.out.println("game over");
+									System.exit(0);//this ends the app
+								}
+								else if (theInputA==2){
+									restartLoop60= true;//this makes the whole cross examination3 loop restart again
+									String ReCross= "\n*”Judge”*\n\n"+
+													"Please, re-start your cross examination again.\n\n";
+								slowPrint(ReCross,1);
+								}
+					}
+					else
+					{
+						String invalidAnswer= "That is not a valid answer\n"+
+					                          "Please type 1,2,3,4 or 5\n";
+						slowPrint(invalidAnswer, 1);
+						System.out.println("....Press enter to continue");
+						pressEnter("");
+					}	
+				}
+		}//belongs to the restartLoop60
+	}//belongs to the method theGame50
+	
+	public static void theGame90(){//this starts the seventh set of texts	
+		String [] Texts90;
+		Texts90= new String[14];
+		
+		Texts90[0]=  "*”Anderson*” (you)\n\n"+
+					"          ___________\n"+
+				    "         | OBJECTION!|\n"+
+				    "          ¯¯¯¯¯¯¯¯¯¯¯\n\n"+
+					"The murder weapon wasn't\n"+
+					"a clock.\n"+
+					"It was a “fortune cat” statue!\n\n"+
+						
+						"Now how is that statue supposed\n"+
+						"to be a clock?\n\n";
+		
+		Texts90[1]=  "*”Smith”*\n\n"+
+						"Whaa!?\n\n"+
+						
+						"Y-you with your 'objections'\n"+
+						"and your 'evidence'... Just\n"+
+						"who do you think you are!?\n\n";
+		
+		Texts90[2]=   "*”Anderson*” (you)\n\n"+
+						"Just answer the question, Mr Smith. \n\n";
+		  
+		Texts90[3]=   "*”Smith”*\n\n"+
+						"Hey, I... I saw it there, okay!\n"+
+						"That's a clock!\n\n";
+		Texts90[4]=  "*”Anderson*” (you)\n\n"+
+						"A clock? And was that the weapon?\n\n";
+		Texts90[5]=  "*”Smith”*\n\n"+
+						"No, I mean,,,,, yes,,, or…..\n\n";
+		Texts90[6]=  "*”Anderson*” (you)\n\n"+
+						"Yes or not? Was A clock the weapon?\n"+
+						"Or was a statue?\n\n"+
+						"You look very nervous…\n\n";
+		Texts90[7]=  "*”Smith”*\n\n"+
+						"Grrr!!! Ahh!! Grrrrr!!!!\n\n";
+		Texts90[8]=  "*”Anderson*” (you)\n\n"+
+						"Answer the question, was the weapon \n"+
+						"a clock or a statue?\n\n";
+		Texts90[9]=  "*”Smith”*\n\n"+
+						"Grrr!!!!\n"+
+						"OK!!!\n"+
+						"OK!!!\n\n"+
+						"It was a statue!!!!\n"+
+						"IT was a statue and I used it!!!\n"+
+						"I hit that she-dog right in the head!!!\n\n"+
+						
+						"And she deserved it!!\n";
+		Texts90[10]= "*”Judge”*\n\n"+
+						"So, Mr. Smith, you kill Ms. Katherine Brown? \n"+
+						"Is that what you are admitting?\n\n";
+						
+		Texts90[11]= "*”Smith”*\n\n"+
+						"YES!!!\n"+
+						"I kill her!!\n"+
+						"I am fed up with this stuff\n\n";
+						
+		Texts90[12]= "*”Judge”*\n\n"+
+						"I think everything is clear now,\n"+
+						"I find Mr Smith guilty for murdering Ms. Brown, \n"+
+						"Therefore, I declare Mr. Wilson innocent\n"+
+						"n\n\n";
+						
+																								
+		Texts90[13]=   "Case closed\n\n\n\n\n\n\n"+
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+				 "                                                                                 YOU WIN!"+
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+				"";
+										
+		for(int f=0;f<Texts90.length;f++){
+			slowPrint(Texts90[f], 1);
+			System.out.println("\n....Press Enter to continue");
+			pressEnter("");
+		}
+			
+	}
+}
